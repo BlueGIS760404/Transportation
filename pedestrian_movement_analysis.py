@@ -1,5 +1,5 @@
 """
-# Python script to generate a sample pedestrian_gps.csv
+# Python script to generate a sample pedestrian_gps_data.csv
 
 import pandas as pd
 import numpy as np
