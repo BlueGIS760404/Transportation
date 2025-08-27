@@ -127,6 +127,7 @@ if "state" in df.columns:
     disp = ConfusionMatrixDisplay(confusion_matrix=cm, display_labels=labels)
     disp.plot(cmap="Blues", values_format="d")
     plt.title("Confusion Matrix: Ground Truth vs Classified States")
+    plt.savefig("confusion_matrix.png", dpi=300)
     plt.show()
 
 # ---- Plots ----
@@ -135,6 +136,7 @@ plt.plot(df["longitude"], df["latitude"], marker="o", alpha=0.7)
 plt.title("Pedestrian Trajectory")
 plt.xlabel("Longitude")
 plt.ylabel("Latitude")
+plt.savefig("trajectory.png", dpi=300)
 plt.show()
 
 plt.figure(figsize=(10, 5))
@@ -143,6 +145,7 @@ plt.axhline(0.5, color='red', linestyle='--', label='Stop/Walk threshold')
 plt.axhline(2.5, color='orange', linestyle='--', label='Walk/Jog threshold')
 plt.title("Speed over Time with Classification Thresholds")
 plt.legend()
+plt.savefig("speed_over_time.png", dpi=300)
 plt.show()
 
 # ---- Pie Chart of Activity Breakdown ----
@@ -150,7 +153,5 @@ activity_counts = df["classified_state"].value_counts()
 plt.figure(figsize=(6, 6))
 plt.pie(activity_counts, labels=activity_counts.index, autopct='%1.1f%%', startangle=140)
 plt.title("Activity Breakdown (Stopped / Walking / Jogging)")
+plt.savefig("activity_breakdown.png", dpi=300)
 plt.show()
-
-
-
