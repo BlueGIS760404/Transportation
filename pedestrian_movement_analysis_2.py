@@ -56,9 +56,9 @@ df = pd.DataFrame({
 })
 
 # Save to CSV
-df.to_csv("gps_data.csv", index=False)
+df.to_csv("pedestrian_gps_data.csv", index=False)
 
-print("gps_data.csv created with", len(df), "rows including stops, walking, and jogging phases.")
+print("pedestrian_gps_data.csv created with", len(df), "rows including stops, walking, and jogging phases.")
 """
 
 
