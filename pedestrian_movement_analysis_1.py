@@ -34,9 +34,9 @@ for pid in range(1, num_pedestrians + 1):
 df = pd.DataFrame(data)
 
 # Save CSV
-df.to_csv('pedestrian_gps.csv', index=False)
+df.to_csv('pedestrian_gps_data.csv', index=False)
 
-print("Sample pedestrian_gps.csv created!")
+print("Sample pedestrian_gps_data.csv created!")
 """
 
 
