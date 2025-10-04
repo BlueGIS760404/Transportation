@@ -33,6 +33,29 @@ def get_route_edge_attributes(G, route, attribute):
             attr_values.append(None)
     return attr_values
 
+# A beginner-friendly version of the get_route_edge_attributes function
+# def get_route_edge_attributes_simple(G, route, attribute):
+#     # List to hold the values we find
+#     attr_values = []
+#     # Go through each pair of nodes in the route
+#     for i in range(len(route) - 1):
+#         u = route[i]      # current node
+#         v = route[i + 1]  # next node
+#         # Look up all edges between u and v
+#         edge_data = G.get_edge_data(u, v)
+#         if edge_data is None:
+#             # No edge found
+#             attr_values.append(None)
+#         else:
+#             # Pick the first edge (don’t worry about shortest here)
+#             first_edge = list(edge_data.values())[0]
+#             # Get the attribute (like 'length' or 'name')
+#             if attribute in first_edge:
+#                 attr_values.append(first_edge[attribute])
+#             else:
+#                 attr_values.append(None)
+#     return attr_values
+
 # Load road network for San Francisco
 place_name = "San Francisco, California, USA"
 G = ox.graph_from_place(place_name, network_type='drive')
